@@ -7,7 +7,7 @@
         var appId = "YOUR APP HERE";
         var item = Office.context.mailbox.item;
         var parameters =
-            "&mailid=" + item.itemId +
+            "&mailid=" + encodeURIComponent(item.itemId) +
             "&from=" + item.from.emailAddress +
             "&fromname=" + item.from.displayName +
             "&subject=" + item.subject +
